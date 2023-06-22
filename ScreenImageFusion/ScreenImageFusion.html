@@ -1,0 +1,103 @@
+<div class='screen image_fusion'>
+	<div class='content'>
+		<div class='header'>
+			<div class='shape1'></div>
+			<div class='number'>1</div>
+			<div class='title'>IMAGE FUSION</div>
+			<div class='textArea'>Automatically fuse your patient’s MRIs and post-op CT</div>
+			<div class="exit" onclick='main.goToScreen(new ScreenImageGuidedProgramming(main.container))'></div>
+		</div>
+
+
+
+		<div class='page page1'>
+			<div id='part1'>
+				<div class='grayBar'></div>
+				<div class='screenImage'></div>
+				<div class='label label1'>Image fusion automatically co-registers your patient imaging</div>
+				<div class='label label2'>Easy to use Spyglass tool to verify and accept fusion</div>
+				<div class='line line1'></div>
+				<div class='line line2'></div>
+				<div class='buttonBegin boopable' page="page2"
+					onclick='$("#part1").addClass("hidden");$("#part2").removeClass("hidden");$(".breadcrumbBar").removeClass("hidden");$("#video1")[0].playWhenReady()'>
+					Begin</div>
+			</div>
+			<div id='part2' class='hidden'>
+				<video id='video1' class='imageFusionVideo'
+					poster='./videos/image_guided_programming/posters/ImageFusion_Clip_01_AutomaticImageFusion.jpg'
+					autoplay=false>
+					<source type='video/mp4'
+						src='./videos/image_guided_programming/ImageFusion_Clip_01_AutomaticImageFusion.mp4'>
+					</source>
+				</video>
+				<div class='indicator' page="page2"
+					onclick='main.currentScreen.showPage($(".breadcrumb[page=page2]")[0])'></div>
+			</div>
+		</div>
+
+
+		<div class='page page2 hidden'>
+			<video id='videoSpyglass' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/ImageFusion_Clip_02_SpyglassTool.jpg' autoplay=false>
+				<source type='video/mp4' src='./videos/image_guided_programming/ImageFusion_Clip_02_SpyglassTool.mp4'>
+				</source>
+			</video>
+			<div class='indicator' page="page3" onclick='main.currentScreen.showPage($(".breadcrumb[page=page3]")[0])'>
+			</div>
+			<div class='indicator' page="page4" onclick='main.currentScreen.showPage($(".breadcrumb[page=page4]")[0])'>
+			</div>
+		</div>
+
+
+		<div class='page page3 hidden'>
+			<video id='videoBlending' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/ImageFusion_Clip_03_BlendingTool.jpg' autoplay=false>
+				<source type='video/mp4' src='./videos/image_guided_programming/ImageFusion_Clip_03_BlendingTool.mp4'>
+				</source>
+			</video>
+			<div class='indicator' page="page4" onclick='main.currentScreen.showPage($(".breadcrumb[page=page4]")[0])'>
+			</div>
+		</div>
+
+
+		<div class='page page4 hidden'>
+			<div class='screenImage'></div>
+			<div class='indicator' page="page5" onclick='main.currentScreen.showPage($(".breadcrumb[page=page5]")[0])'>
+			</div>
+		</div>
+
+
+		<div class='page page5 hidden'>
+			<div class='screenImage'></div>
+		</div>
+
+		<div id='videoControls' class='boopable'>
+			<div class='shadow'></div>
+			<div class='slider'>
+				<div class='background'></div>
+				<div class='progress'></div>
+				<div class='handle'></div>
+			</div>
+			<div class='buttonPlayPause' onclick='main.currentScreen.playPauseVideo()'></div>
+			<div class='time'></div>
+			<div class='buttonFullScreen' onclick="main.currentScreen.fullScreenVideo()"></div>
+		</div>
+
+
+		<div class='disclaimer'>Images provided courtesy of Brainlab</div>
+
+	</div>
+	<div class='breadcrumbBar hidden'>
+		<div class="breadcrumb boopable disabled" page="page1" onclick='main.currentScreen.showPage(this)'>Image Fusion
+		</div>
+		<div class="breadcrumb boopable hidden disabled" page="page2" onclick='main.currentScreen.showPage(this)'>Spy
+			Glass</div>
+		<div class="breadcrumb boopable hidden disabled" page="page3" onclick='main.currentScreen.showPage(this)'>
+			Blending</div>
+		<div class="breadcrumb boopable hidden disabled" page="page4" onclick='main.currentScreen.showPage(this)'>Accept
+			Result</div>
+		<div class="breadcrumb boopable hidden disabled" page="page5" onclick='main.currentScreen.showPage(this)'>
+			Accepted</div>
+	</div>
+	<div class='closeButton' onclick='main.currentScreen.popScreen()'></div>
+</div>

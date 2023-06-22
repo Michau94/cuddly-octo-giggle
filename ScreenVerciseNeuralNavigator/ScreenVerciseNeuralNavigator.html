@@ -1,0 +1,179 @@
+<div class='screen vercise_neural_navigator'>
+    <div class='content'>
+        <div class='page page1' data-page="4.0.0">
+            <div class='title'>Vercise&trade; Neural Navigator 4</div>
+            <div class='largerTitle'>Programming Screen Overview</div>
+            <div class='shape1'></div>
+            <div class='screenImage screen1'>
+                <!-- 				<div class='screenLabel label1'>
+					<div class='title'>STIMVIEW</div>
+					<div class='line'></div>
+					<div class='circle'></div>
+				</div>
+				<div class='screenLabel label2'>
+					<div class='title'>Pulse Width &amp; Frequency</div>
+					<div class='line'></div>
+					<div class='circle'></div>
+				</div>
+				<div class='screenLabel label3'>
+					<div class='title'>Amplitude Control</div>
+					<div class='line'></div>
+					<div class='circle'></div>
+				</div>
+				<div class='screenLabel label4'>
+					<div class='title'>One-Touch Directional Controls</div>
+					<div class='line'></div>
+					<div class='circle'></div>
+				</div>
+				<div class='screenLabel label5'>
+					<div class='title'>Level Selector</div>
+					<div class='line line1'></div>
+					<div class='line line2'></div>
+					<div class='circle'></div>
+				</div>
+				<div class='screenLabel label6'>
+					<div class='title'>Rotation Control</div>
+					<div class='line line1'></div>
+					<div class='line line2'></div>
+					<div class='circle'></div>
+				</div>
+				<div class='screenLabel label7'>
+					<div class='title'>Reference Head</div>
+					<div class='line line1'></div>
+					<div class='line line2'></div>
+					<div class='circle circle1'></div>
+					<div class='circle circle2'></div>
+				</div>
+				<div class='screenLabel label8'>
+					<div class='title'>Contact Selector</div>
+					<div class='line'></div>
+					<div class='circle'></div>
+				</div> -->
+            </div>
+            <div id='buttonLaunchSimulator' class='boopable' onclick='main.currentScreen.pushScreen(new ScreenSoftwareSimulation(main.container))'>Launch Simulator</div>
+        </div>
+
+
+
+        <div class='page page2 hidden' data-page="4.1.0">
+            <div class='title'>Vercise&trade; Neural Navigator 4</div>
+            <div class='largerTitle'>Clinical Effects Map</div>
+            <div class='shape1'></div>
+            <div class='row'>
+                <div class='col'>
+                    <div class='clinicalEffectsImg1'></div>
+                </div>
+                <div class='col'>
+                    <div class='textArea'>
+                        With the Clinical Effects Map (CEM), seamlessly annotate a patient’s response to stimulation ensuring that valuable clinical data is preserved on the IPG.
+                        <p>
+                            <ul>
+                                <li>For a given stimulation setting, record symptom relief and / or adverse effects </li>
+                                <li>Familiar 0 to 4 UPDRS-like rating scale</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col'>
+                    <div class='clinicalEffectsImg2'></div>
+                </div>
+                <div class='col'>
+                    <div class='textArea'>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class='page page3 hidden' data-page="4.2.0">
+            <div class='title'>Vercise&trade; Neural Navigator 4</div>
+            <div class='largerTitle'>Beamsearch&trade; Methodology</div>
+            <div class='shape2'></div>
+            <div class='textArea'>
+                Streamline programming with Vercise Neural Navigator 4 and the Beamsearch Methodology
+            </div>
+
+
+            <div class='subpageContainer'>
+                <div class='subpage subpage1' data-page="4.2.0">
+                    <div class='row'>
+                        <div class='col'>
+                            <div class='vidThumb beamsearch1' video='./videos/Beam%20Search%20cartesia-1.mp4' onclick='main.currentScreen.popupVideo(this)'>
+                                <div class='title'>Step 1<br>Find optimal level:</div>
+                                Evaluate changes in the type and magnitude of clinical response while steering current along the length of the lead.
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class='vidThumb beamsearch2' video='./videos/Beam%20Search%20cartesia-2.mp4' onclick='main.currentScreen.popupVideo(this)'>
+                                <div class='title'>Step 2<br>Find optimal direction:</div>
+                                Evaluate changes in the type and magnitude of clinical response while steering current around the lead, at the previously defined optimal level.
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class='vidThumb beamsearch3' video='./videos/Beam%20Search%20cartesia-3.mp4' onclick='main.currentScreen.popupVideo(this)'>
+                                <div class='title'>Step 3<br>Find optimal amplitude setting:</div>
+                                Assess therapeutic window at this best level and direction, and select anamplitude that provides the best therapeutic effect while minimizing side effects.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class='subpage' data-page="4.2.1">
+                    <video id='videoVolkmanBeamsearch' poster="./videos/poster.jpg">
+						<source src='./videos/volkmann_beamsearch.mp4'  type='video/mp4'>
+					</video>
+                    <div class='volkmanPlayButton' onclick='main.currentScreen.playVolkmann()'></div>
+                </div>
+            </div>
+            <div class='pageIndicatorArea'></div>
+            <div class='buttonSubPagePrev boopable hidden'></div>
+            <div class='buttonSubPageNext boopable'></div>
+
+        </div>
+
+
+
+        <div class='page page4 hidden' data-page="4.3.0">
+            <div class='title'>Vercise&trade; Neural Navigator 4</div>
+            <div class='largerTitle'>Reports</div>
+            <div class='shape2'></div>
+            <div class='shape3'></div>
+            <div class='reportsArea'>
+                <div class='report boopable' onclick='main.showPDF("docs/\Stimulation%20Configueration.pdf")'>
+                    <div class='icon' style='background-image:url(./images/ScreenVerciseNeuralNavigator/report_program@2x.png)' )></div>
+                    <div class='reportTitle'>Stimulation Configuration</div>
+                </div>
+                <div class='report boopable' onclick='main.showPDF("docs/\Impedances.pdf")'>
+                    <div class='icon' style='background-image:url(./images/ScreenVerciseNeuralNavigator/report_config@2x.png)' )></div>
+                    <div class='reportTitle'>Impedances</div>
+                </div>
+                <div class='report boopable' onclick='main.showPDF("docs/\Directional%20Clinical%20Effects%20Maps.pdf")'>
+                    <div class='icon' style='background-image:url(./images/ScreenVerciseNeuralNavigator/report_improv@2x.png)' )></div>
+                    <div class='reportTitle'>Directional Clinical Effects Maps</div>
+                </div>
+                <div class='report boopable' onclick='main.showPDF("docs/\Clinical%20Effects%20Map.pdf")'>
+                    <div class='icon' style='background-image:url(./images/ScreenVerciseNeuralNavigator/report_map@2x.png)' )></div>
+                    <div class='reportTitle'>Clinical Effects Map</div>
+                </div>
+                <div class='report boopable' onclick='main.showPDF("docs/\Clinical%20Effect%20Details.pdf")'>
+                    <div class='icon' style='background-image:url(./images/ScreenVerciseNeuralNavigator/report_details@2x.png)' )></div>
+                    <div class='reportTitle'>Clinical Effects Details</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class='tabs'>
+        <div class="tab boopable multiline selected" page="page1" onclick='main.currentScreen.showPage(this)'>Programming Screen<br>Overview</div>
+        <div class="tab boopable" page="page2" onclick='main.currentScreen.showPage(this)'>Clinical Effects Map</div>
+        <div class="tab boopable multiline" page="page3" onclick='main.currentScreen.showPage(this)'>Beamsearch&trade;<br>Methodology</div>
+        <div class="tab boopable" page="page4" onclick='main.currentScreen.showPage(this)'>Reports</div>
+        <div class='spacer'></div>
+    </div>
+</div>

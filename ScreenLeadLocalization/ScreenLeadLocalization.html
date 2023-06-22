@@ -1,0 +1,123 @@
+<div class='screen lead_localization'>
+	<div class='content'>
+		<div class='header'>
+			<div class='shape1'></div>
+			<div class='number'>3</div>
+			<div class='title'>Lead localization</div>
+			<div class='textArea'>Automatically detect the location and orientation of the Vercise Cartesia™ Lead
+				relative to the patient’s anatomy</div>
+			<div class="exit" onclick='main.goToScreen(new ScreenImageGuidedProgramming(main.container))'></div>
+		</div>
+
+
+		<div class='page page1'>
+			<div id='part1'>
+				<div class='grayBar'></div>
+				<div class='screenImage1'></div>
+				<div class='screenImage2'></div>
+				<div class='label label1'>Image-based detection of lead location and orientation based on post-op CT
+					artifact</div>
+				<div class='label label2'>3D display of the lead within the target anatomy</div>
+				<div class='line line1'></div>
+				<div class='line line2'></div>
+				<div class='buttonBegin boopable' page="page2"
+					onclick='main.currentScreen.showPage($(".breadcrumb[page=page2]")[0])'>Begin</div>
+			</div>
+		</div>
+
+
+		<div class='page page2 hidden'>
+			<video id='video1' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/LeadLocalization_Combined2.jpg'>
+				<source type='video/mp4' src='./videos/image_guided_programming/LeadLocalization_Combined2.mp4'>
+				</source>
+			</video>
+			<div class='indicator indicator1' onclick='main.currentScreen.playVideo1()'></div>
+			<div class='indicator indicator2 hidden' page="page3"
+				onclick='main.currentScreen.showPage($(".breadcrumb[page=page3]")[0])'></div>
+		</div>
+
+
+		<div class='page page3 hidden'>
+			<video id='video2' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/LeadLocalization_Clip_02_SelectLeadTypeAndOrientation.jpg'>
+				<source type='video/mp4'
+					src='./videos/image_guided_programming/LeadLocalization_Clip_02_SelectLeadTypeAndOrientation.mp4'>
+				</source>
+			</video>
+			<div class='indicator indicator1' page="page4"
+				onclick='$(".indicator").addClass("hidden");$("#video2")[0].play()'></div>
+			<div class='indicator indicator2 hidden' page="page4"
+				onclick='main.currentScreen.showPage($(".breadcrumb[page=page4]")[0])'></div>
+		</div>
+
+
+		<div class='page page4 hidden'>
+			<video id='video3' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/Lead_Loc_Showpad_Clip_1.jpg'>
+				<source type='video/mp4' src='./videos/image_guided_programming/Lead_Loc_Showpad_Clip_1.mp4'>
+				</source>
+			</video>
+			<div class='indicator hidden' page="page5" onclick='main.currentScreen.playVideo3()'></div>
+		</div>
+
+		<div class='page page5 hidden'>
+			<video id='video4' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/Lead_Loc_Showpad_Clip_2.jpg'>
+				<source type='video/mp4' src='./videos/image_guided_programming/Lead_Loc_Showpad_Clip_2.mp4'>
+				</source>
+			</video>
+			<div class='indicator hidden indicator1' page="page6" onclick='main.currentScreen.playVideo4()'></div>
+			<div class='indicator hidden indicator2' page="page7"
+				onclick='main.currentScreen.showPage($(".breadcrumb[page=page7]")[0])'></div>
+		</div>
+
+
+		<!-- 	    <div class='page page6 hidden'>
+			<video id='video5' class='imageFusionVideo' poster='./videos/image_guided_programming/posters/LeadLocalization_Clip_04_2DViewsOfLeadInPatientAnatomy.jpg'>
+				<source type='video/mp4' src='./videos/image_guided_programming/LeadLocalization_Clip_04_2DViewsOfLeadInPatientAnatomy.mp4'></source>
+			</video>
+	        <div class='indicator hidden' page="page7" onclick='main.currentScreen.showPage($(".breadcrumb[page=page7]")[0])'></div>
+	    </div>
+ -->
+
+		<div class='page page7 hidden'>
+			<div class='screenImage'></div>
+		</div>
+
+		<div id='videoControls' class='boopable'>
+			<div class='shadow'></div>
+			<div class='slider'>
+				<div class='background'></div>
+				<div class='progress'></div>
+				<div class='handle'></div>
+			</div>
+			<div class='buttonPlayPause' onclick='main.currentScreen.playPauseVideo()'></div>
+			<div class='time'></div>
+			<div class='buttonFullScreen' onclick="main.currentScreen.fullScreenVideo()"></div>
+		</div>
+
+
+
+		<div class='disclaimer'>Images provided courtesy of Brainlab</div>
+	</div>
+	<div class='breadcrumbBar'>
+		<div class="breadcrumb boopable hidden" page="page1" onclick='main.currentScreen.showPage(this)'>Lead
+			Localization</div>
+		<div class="breadcrumb boopable hidden disabled" page="page2" onclick='main.currentScreen.showPage(this)'>Detect
+			Lead</div>
+		<div class="breadcrumb boopable hidden disabled" page="page3" onclick='main.currentScreen.showPage(this)'>Detect
+			Orientation</div>
+		<div class="breadcrumb boopable hidden disabled" page="page4" onclick='main.currentScreen.showPage(this)'>Rotate
+		</div>
+		<div class="breadcrumb boopable hidden disabled" page="page5" onclick='main.currentScreen.showPage(this)'>Zoom
+		</div>
+		<div class="breadcrumb boopable hidden disabled" page="page6" onclick='main.currentScreen.showPage(this)'>Done
+		</div>
+		<div class="breadcrumb boopable hidden disabled" page="page7" onclick='main.currentScreen.showPage(this)'>View
+			Tools</div>
+		<div class="breadcrumb boopable hidden disabled" page="page8" onclick='main.currentScreen.showPage(this)'>Done
+		</div>
+	</div>
+	<div class='closeButton' onclick='main.currentScreen.popScreen()'></div>
+</div>

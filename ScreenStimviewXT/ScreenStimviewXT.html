@@ -1,0 +1,68 @@
+<div class='screen stimview_xt page' data-page="1">
+	<div class='content'>
+		<div class='title'>StimView XT</div>
+		<div class='textArea'>
+			Shaping successful outcomes with integrated visualization. Designed to facilitate DBS programming, clinicians can now visualize patient-specific anatomy, directional lead orientation and stimulation field modeling, in real time on a single device.
+		</div>
+		<div class='row'>
+			<div class='col'>
+				<div class='stimviewImg1'></div>
+			</div>
+			<div class='col'>
+				Stimulation Field Modeling (SFM)
+				<div class='button' onclick='main.currentScreen.showPopup(this)' popup='popup1'>What is an SFM?</div>
+				<div class='button' onclick='main.currentScreen.showPopup(this)' popup='popup2'>How can an SFM be useful?</div>
+				<div class='button' onclick='main.currentScreen.showPopup(this)' popup='popup3'>Model assumptions</div>
+				<div class='button' onclick='main.currentScreen.showPopup(this)' popup='popup4'>Is the modal reliable/robust?</div>
+			</div>
+			<div class='col'>
+				<div class="popup popup1 hidden">
+					<div class='indicator'></div>
+					<div class='popupContent'>
+						<ul>
+							<li>Visual model designed to estimate the size, position, and shape of tissue activation for stimulation</li>	
+							<li>Not an electrical field. Designed to estimate the volume of tissue activated by simulating the electrical field and model neurons</li>						
+						</ul>
+					</div>
+				</div>
+				<div class="popup popup2 hidden">
+					<div class='indicator'></div>
+					<div class='popupContent'>
+						Visualization of the volume of tissue activated for a particular stimulation setting can narrow the programming parameter space.
+					</div>
+				</div>
+				<div class="popup popup3 hidden">
+					<div class='indicator'></div>
+					<div class='popupContent'>
+						<ul>
+							<li>Based on the work of Cameron McIntyre, PhD, known for his thought-leading work in neurostimulation modeling in the brain</li>
+							<li>Computer models of axons may approximate the activation of fibers in response to a stimulation field.</li>
+							<li>Relevant fiber geometry taken into account (Node Ranvier, myelin sheath, etc.)</li>
+							<li>
+								Assume most activatable fibers by diameter and orientation (perpendicular to electrode) and mostly (except encapsulation layer), homogenous (conductivity behaves same across tissues), and isotropic environment (conductivity is same in each direction). AKA: Does not include patient-specific anisotropies or inhomogeneities in the tissue, nor patient-specific fiber orientations or locations.
+								<ul>
+									<li>Differential equations of ion channels are used to determine model fiber's reaction to stimulation - Does it fire or not?</li>
+									<li>A field of these model axons sugest a picture of tissue response to stimulation</li>
+								</ul>
+							</li>						
+						</ul>
+					</div>
+				</div>
+				<div class="popup popup4 hidden">
+					<div class='indicator'></div>
+					<div class='popupContent'>
+						<ul>
+							<li>
+								This level of detail has been shown to be reasonably accurate in journal publications from the McIntyre lab, as well as a tool for identifying postoperative programming settings
+								<ul>
+									<li>Chaturvedi et al. Patient-Specific models of deep brain stimulation: influence of field model complexity on neural activation predictions. Brain Stimulation, 2010</li>	
+									<li>Franemolle et al. Reversing cognitive motor imparements in Parkinson's disease patients using a computational modeling approach to deep brain stimulation programming. Brain. 2010</li>						
+								</ul>
+							</li>						
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

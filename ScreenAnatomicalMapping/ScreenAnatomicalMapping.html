@@ -1,0 +1,110 @@
+<div class='screen anatomical_mapping'>
+	<div class='content'>
+		<div class='header'>
+			<div class='shape1'></div>
+			<div class='number'>2</div>
+			<div class='title'>Anatomical Mapping</div>
+			<div class='textArea'>Automatically visualize patient specific anatomy from the patient’s imaging</div>
+			<div class="exit" onclick='main.goToScreen(new ScreenImageGuidedProgramming(main.container))'></div>
+		</div>
+
+
+
+		<div class='page page1'>
+			<div id='part1'>
+				<div class='grayBar'></div>
+				<div class='screenImage'></div>
+				<div class='label label1'>Proprietary adaptive algorithm captures inherent asymmetry and abnormality
+				</div>
+				<div class='label label2'>Highly consistent MRI based segmentation of structures in the basal ganglia
+					region</div>
+				<div class='line line1'></div>
+				<div class='line line2'></div>
+				<div class='buttonBegin boopable' page="page2"
+					onclick='$("#part1").addClass("hidden");$("#part2").removeClass("hidden");$(".breadcrumbBar").removeClass("hidden");$("#video1")[0].playWhenReady()'>
+					Begin</div>
+			</div>
+			<div id='part2' class='hidden'>
+				<video id='video1' class='imageFusionVideo'
+					poster='./videos/image_guided_programming/posters/AnatomicalMapping_Clip_01_AutomaticAnatomicalMapping.jpg'>
+					<source type='video/mp4'
+						src='./videos/image_guided_programming/AnatomicalMapping_Clip_01_AutomaticAnatomicalMapping.mp4'>
+					</source>
+				</video>
+				<div class='indicator hidden' page="page2"
+					onclick='main.currentScreen.showPage($(".breadcrumb[page=page2]")[0])'></div>
+			</div>
+		</div>
+
+
+		<div class='page page2 hidden'>
+			<video id='video2' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/AnatomicalMapping_Clip_02_RedNucleusVerification.jpg'>
+				<source type='video/mp4'
+					src='./videos/image_guided_programming/AnatomicalMapping_Clip_02_RedNucleusVerification.mp4'>
+				</source>
+			</video>
+			<video id='video3' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/AnatomicalMapping_Clip_03_SNRVerification.jpg'>
+				<source type='video/mp4'
+					src='./videos/image_guided_programming/AnatomicalMapping_Clip_03_SNRVerification.mp4'>
+				</source>
+			</video>
+			<video id='video4' class='imageFusionVideo'
+				poster='./videos/image_guided_programming/posters/AnatomicalMapping_Clip_04_STNVerification.jpg'>
+				<source type='video/mp4'
+					src='./videos/image_guided_programming/AnatomicalMapping_Clip_04_STNVerification.mp4'>
+				</source>
+			</video>
+			<div class='yellowCheck' id='check1'></div>
+			<div class='yellowCheck' id='check2'></div>
+			<div class='yellowCheck' id='check3'></div>
+			<div class='indicator indicator1'
+				onclick='$("#check1").addClass("checked");main.currentScreen.playVideo("video2")'></div>
+			<div class='indicator indicator2'
+				onclick='$("#check2").addClass("checked");main.currentScreen.playVideo("video3")'></div>
+			<div class='indicator indicator3'
+				onclick='$("#check3").addClass("checked");main.currentScreen.playVideo("video4")'></div>
+			<div class='indicator indicator4' page="page3"
+				onclick='main.currentScreen.showPage($(".breadcrumb[page=page3]")[0])'></div>
+		</div>
+
+
+		<div class='page page3 hidden'>
+			<div class='screenImage'></div>
+			<div class='indicator' page="page4" onclick='main.currentScreen.showPage($(".breadcrumb[page=page4]")[0])'>
+			</div>
+		</div>
+
+
+		<div class='page page4 hidden'>
+			<div class='screenImage'></div>
+		</div>
+
+
+		<div id='videoControls' class='boopable'>
+			<div class='shadow'></div>
+			<div class='slider'>
+				<div class='background'></div>
+				<div class='progress'></div>
+				<div class='handle'></div>
+			</div>
+			<div class='buttonPlayPause' onclick='main.currentScreen.playPauseVideo()'></div>
+			<div class='time'></div>
+			<div class='buttonFullScreen' onclick="main.currentScreen.fullScreenVideo()"></div>
+		</div>
+
+		<div class='disclaimer'>Images provided courtesy of Brainlab</div>
+
+
+	</div>
+	<div class='breadcrumbBar'>
+		<div class="breadcrumb boopable hidden" page="page1" onclick='main.currentScreen.showPage(this)'>Anatomical
+			Mapping</div>
+		<div class="breadcrumb boopable hidden disabled" page="page2" onclick='main.currentScreen.showPage(this)'>
+			Confirm Anatomical Structures</div>
+		<div class="breadcrumb boopable hidden disabled" page="page3" onclick='main.currentScreen.showPage(this)'>Done
+		</div>
+	</div>
+	<div class='closeButton' onclick='main.currentScreen.popScreen()'></div>
+</div>

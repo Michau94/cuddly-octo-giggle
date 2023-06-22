@@ -1,0 +1,38 @@
+<div class='screen software_simulation page' data-page="">
+	<div class='closeButton' onclick='main.currentScreen.popScreen()'></div>
+	<div class='softwareSimulation'>
+		<div class='monitorBackground'></div>
+
+		<div id='softwareSimScreen'>
+			<div class='softwareButton' id='buttonON' onclick='main.currentScreen.buttonONPressed()'></div>
+			<div class='softwareButton' id='buttonStepSize1' onclick='main.currentScreen.buttonStepSize1Pressed()'></div>
+			<div class='softwareButton' id='buttonStepSize5' onclick='main.currentScreen.buttonStepSize5Pressed()'></div>
+			<div class='softwareButton' id='buttonAmpUp' onclick='main.currentScreen.buttonAmpUpPressed()'></div>
+			<div class='softwareButton' id='buttonAmpDown' onclick='main.currentScreen.buttonAmpDownPressed()'></div>
+			<div class='softwareButton' id='buttonRotateLeft' onclick='main.currentScreen.buttonRotateLeftPressed()'></div>
+			<div class='softwareButton' id='buttonRotateRight' onclick='main.currentScreen.buttonRotateRightPressed()'></div>
+			<div class='softwareButton' id='buttonPos1' onclick='main.currentScreen.buttonPos1Pressed()'></div>
+			<div class='softwareButton' id='buttonPos2' onclick='main.currentScreen.buttonPos2Pressed()'></div>
+			<div class='softwareButton' id='buttonPos3' onclick='main.currentScreen.buttonPos3Pressed()'></div>
+			<div class='softwareButton' id='buttonPos4' onclick='main.currentScreen.buttonPos4Pressed()'></div>
+			<div class='softwareButton' id='buttonPos5' onclick='main.currentScreen.buttonPos5Pressed()'></div>
+			<div class='softwareButton' id='buttonLevelDown' onclick='main.currentScreen.buttonLevelDownPressed()'></div>
+			<div class='softwareButton' id='buttonLevelUp' onclick='main.currentScreen.buttonLevelUpPressed()'></div>
+			<div class='softwareButton' id='buttonFocusDown' onclick='main.currentScreen.buttonFocusDownPressed()'></div>
+			<div class='softwareButton' id='buttonFocusUp' onclick='main.currentScreen.buttonFocusUpPressed()'></div>
+<!-- 			<div class='softwareButton' id='buttonNextStep' onclick='main.currentScreen.buttonNextPressed()'>Continue</div> -->
+
+			<div id='overlayBackground' class='hidden' onclick='main.currentScreen.hideOverlay()'></div>
+
+			<div id='overlayText' class='hidden'></div>
+
+			<div class='indicator step1Indicator hidden'></div>
+			<div class='indicator step2Indicator hidden'></div>
+			<div class='indicator step3Indicator hidden'></div>
+			<div class='indicator step4Indicator hidden'></div>
+			<div class='indicator step5Indicator hidden'></div>
+			<div class='indicator step6Indicator hidden'></div>
+		</div>
+
+	</div>
+</div>
